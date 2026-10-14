@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <title>Navis — Conversational AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span>N</span></div>
+        <div><div class="brand-name">NAVIS</div><div class="brand-subtitle">PERSONAL INTELLIGENCE</div></div>
+      </div>
+      <button id="new-chat" class="new-chat"><span>＋</span> New conversation</button>
+      <div class="section-label">YOUR CONVERSATIONS</div>
+      <div id="conversation-list" class="conversation-list"></div>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><div class="status-title">Local interface</div><div id="status-detail" class="status-detail">Checking AI status…</div></div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="topbar-title"><span class="tiny-orb"></span><span>Navis <span class="muted">/ Conversation</span></span></div>
+        <div class="topbar-right"><span id="provider-pill" class="provider-pill">Checking model</span><button id="clear-chat" class="icon-button" title="Delete this conversation" aria-label="Delete this conversation">⌫</button></div>
+      </header>
+
+      <section id="welcome" class="welcome">
+        <div class="welcome-orb"><div class="orb-core"></div><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div></div>
+        <div class="eyebrow">YOUR PERSONAL AI</div>
+        <h1>Good to have you here.</h1>
+        <p class="welcome-copy">I'm Navis. Let's think, learn and build something useful together.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Help me plan my day."><span>↗</span><b>Plan my day</b><small>Turn ideas into next steps</small></button>
+          <button class="suggestion" data-prompt="Explain how large language models work in simple terms."><span>⌘</span><b>Explore an idea</b><small>Learn something new</small></button>
+          <button class="suggestion" data-prompt="Help me design a clean Python project structure."><span>⌁</span><b>Build something</b><small>Work through a project</small></button>
+        </div>
+      </section>
+
+      <section id="messages" class="messages" aria-live="polite"></section>
+      <div id="error-banner" class="error-banner hidden"></div>
+
+      <footer class="composer-area">
+        <form id="chat-form" class="composer">
+          <textarea id="message-input" rows="1" maxlength="12000" placeholder="Message Navis…" aria-label="Message Navis"></textarea>
+          <div class="composer-bottom"><span class="composer-hint">Enter to send · Shift + Enter for a new line</span><button id="send-button" class="send-button" type="submit" aria-label="Send message"><span>↑</span></button></div>
+        </form>
+        <div class="disclaimer">Navis can make mistakes. Check important information.</div>
+      </footer>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
