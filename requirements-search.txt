@@ -1,0 +1,2 @@
+# Additional dependency for Navis's DuckDuckGo-backed public web search.
+ddgs>=9.5.2
